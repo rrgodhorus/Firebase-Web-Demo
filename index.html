@@ -1,0 +1,86 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Web Interface</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<div class="container text-center" >
+  		<h1 class="text-primary">Firebase Demo</h1>
+  		<br>
+  		<br>
+  		<br>
+  		
+  		<div class="well" style="background-color:lavender;padding: 20px;">
+  			<div class="row" >
+  				<div class="col-sm float-left" >
+  					<h3>Book Name:</h3>
+  					<input type="text" name="bookName" id="bookName">
+  				</div>
+  				<div class="col-sm">
+  					<h3>Author:</h3>
+  					<input type="text" name="bookAuthor" id="bookAuthor">
+  				</div> 
+  				<br> 
+  				<div class="col-sm">
+  					<input id="submitBtn" onclick="submitClick()" type="button" name="addData" value="Add to Database" class="btn btn-primary" >
+  				</div>			
+  			</div>
+  		</div>
+  		<br>
+  		<br>
+  		<br>
+
+  		<div class="well" style="background-color: lavenderblush;padding: 20px;" >
+  			
+  			<div class="row text-center">
+  				<div id="bookNameDisp" class="col-sm-6">
+  					<h3>Book Name</h3>
+  					<ul class="list-group" id="bookNameList">
+  						<!-- <li class="list-group-item">Start</li> -->
+  					</ul>
+  				</div>
+  				<div id="bookAuthorDisp" class="col-sm-6">
+  					<h3>Author</h3>
+  					<ul class="list-group" id="bookAuthorList">
+  						<!-- <li class="list-group-item">Start</li> -->
+  					</ul>
+  				</div>
+  			</div>
+
+
+  		</div>
+
+
+	</div>
+
+
+
+
+
+	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
+	<script>
+  		// Initialize Firebase
+  		var config = {
+    	apiKey: "AIzaSyA1Z3Y6os50_NK1evCArxNY-tELMp4Ys2Q",
+    	authDomain: "recyclerviewfirebase-fb831.firebaseapp.com",
+    	databaseURL: "https://recyclerviewfirebase-fb831.firebaseio.com",
+    	projectId: "recyclerviewfirebase-fb831",
+    	storageBucket: "recyclerviewfirebase-fb831.appspot.com",
+    	messagingSenderId: "409754661997"
+  		};
+  		firebase.initializeApp(config);
+	</script>
+	<script type="text/javascript" src="index.js"></script>
+
+
+</body>
+</html> 
